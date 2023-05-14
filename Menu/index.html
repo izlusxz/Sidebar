@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> App Inspetoria </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+        <i class='bx bxs-category-alt' style='color:#ffffff' ></i>
+      <span class="logo_name">App Inspetoria</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Home</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Home</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-copy-alt' style='color:#ffffff' ></i>
+            <span class="link_name">O.S</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">O.S</a></li>
+          <li><a href="#">Cadastrar O.S</a></li>
+          <li><a href="#">Consultar O.S</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+            <a href="#">
+                <i class='bx bx-note'></i>
+              <span class="link_name">Nota fiscal</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Nota fiscal</a></li>
+            <li><a href="#">Cadastrar NF</a></li>
+            <li><a href="#">Lotes de NF</a></li>
+            <li><a href="#">Consulta de NF</a></li>
+          </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+            <a href="#">
+                <i class='bx bxs-package' style='color:#ffffff' ></i>
+              <span class="link_name">Estufagem</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Estufagem</a></li>
+            <li><a href="#">Alocação de NF</a></li>
+            <li><a href="#">Alocação de lotes</a></li>
+            <li><a href="#">Consultar estufagem</a></li>
+          </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-buildings' style='color:#ffffff' ></i>
+              <span class="link_name">Clientes</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Clientes</a></li>
+            <li><a href="#">Cadastrar</a></li>
+            <li><a href="#">Consultar</a></li>
+          </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+            <a href="#">
+                <i class='bx bxs-city' style='color:#ffffff' ></i>
+              <span class="link_name">Terminais</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Terminais</a></li>
+            <li><a href="#">Cadastrar</a></li>
+            <li><a href="#">Consultar</a></li>
+          </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+            <a href="#">
+                <i class='bx bx-user-circle' style='color:#ffffff' ></i>
+              <span class="link_name">Usuarios</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Usuarios</a></li>
+            <li><a href="#">Cadastrar</a></li>
+            <li><a href="#">Consultar</a></li>
+          </ul>
+      </li>
+      <li>
+    <div class="profile-details">
+      <div class="profile-content">
+      </div>
+      <div class="name-job">
+        <div class="profile_name">Surveyors app</div>
+      </div>
+      <i class='bx bx-log-out' ></i>
+    </div>
+  </li>
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text">Home</span>
+    </div>
+  </section>
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>
